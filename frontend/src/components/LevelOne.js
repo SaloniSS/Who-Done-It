@@ -160,6 +160,10 @@ export const LevelOne = (props) => {
           </Button>
         </div>
       )}
+
+      <Button type="primary" onClick={props.prevLevel}>
+        Start Over
+      </Button>
     </div>
   );
 };

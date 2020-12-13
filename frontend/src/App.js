@@ -24,16 +24,20 @@ function App() {
     setLevel((lvl) => lvl + 1);
   };
 
+  const prevLevel = () => {
+    setLevel((lvl) => lvl - 1);
+  };
+
   const getLevel = () => {
     switch (level) {
       case 0:
         return <Start nextLevel={nextLevel} />;
       case 1:
-        return <LevelOne nextLevel={nextLevel} />;
+        return <LevelOne nextLevel={nextLevel} prevLevel={prevLevel} />;
       case 2:
-        return <LevelTwo nextLevel={nextLevel} />;
+        return <LevelTwo nextLevel={nextLevel} prevLevel={prevLevel} />;
       case 3:
-        return <LevelThree nextLevel={nextLevel} />;
+        return <LevelThree nextLevel={nextLevel} prevLevel={prevLevel} />;
       default:
         return <h2>error</h2>;
     }
