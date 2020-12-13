@@ -24,16 +24,20 @@ function App() {
     setLevel((lvl) => lvl + 1);
   };
 
+  const prevLevel = () => {
+    setLevel((lvl) => lvl - 1);
+  };
+
   const getLevel = () => {
     switch (level) {
       case 0:
         return <Start nextLevel={nextLevel} />;
       case 1:
-        return <LevelOne nextLevel={nextLevel} />;
+        return <LevelOne nextLevel={nextLevel} prevLevel={prevLevel} />;
       case 2:
-        return <LevelTwo nextLevel={nextLevel} />;
+        return <LevelTwo nextLevel={nextLevel} prevLevel={prevLevel} />;
       case 3:
-        return <LevelThree nextLevel={nextLevel} />;
+        return <LevelThree nextLevel={nextLevel} prevLevel={prevLevel} />;
       default:
         return <h2>error</h2>;
     }
@@ -52,23 +56,6 @@ function App() {
       </Layout>
     </div>
   );
-
-  /*return (
-    <Router>
-      <div className="App">
-        <Layout>
-          <Header>Header aka name/lvl</Header>
-          <Content style={{ padding: 20 }}>{getLevel()}</Content>
-        </Layout>
-        <Switch>
-          <Route path="/lvl-1" exact>
-            <MatchDetective />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
-      </div>
-    </Router>
-  );*/
 }
 
 export default App;
