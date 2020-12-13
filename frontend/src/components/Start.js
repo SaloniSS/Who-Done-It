@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import invite from "../invite.jpg";
 
 export const Start = (props) => {
   return (
@@ -14,9 +15,15 @@ export const Start = (props) => {
         death recently thus the murder must be inside the mansion. It is up to
         you to find the killer, but everyone else will be as well!
       </p>
-      <Button type="primary" onClick={props.nextLevel}>
+      <Button
+        type="primary"
+        onClick={props.nextLevel}
+        style={{ marginBottom: 20 }}
+      >
         Start Game
       </Button>
+      <br />
+      <img src={invite} width="30%" />
     </>
   );
 };
