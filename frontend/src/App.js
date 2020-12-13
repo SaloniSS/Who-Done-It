@@ -6,7 +6,6 @@
 } from "react-router-dom";*/
 import "./App.css";
 import "antd/dist/antd.css";
-import { MatchDetective } from "./pages/MatchDetective";
 import { Layout } from "antd";
 import { Profiles } from "./components/Profiles";
 import { useState } from "react";
@@ -16,7 +15,7 @@ import LevelTwo from "./components/LevelTwo";
 import LevelThree from "./components/LevelThree";
 import "./App.css";
 import "antd/dist/antd.css";
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 function App() {
   const [level, setLevel] = useState(0);
