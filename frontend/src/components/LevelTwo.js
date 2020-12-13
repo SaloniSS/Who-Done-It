@@ -11,17 +11,23 @@ const LevelTwo = (props) => {
     setSelected(value);
   };
 
-  const checkAns = () => {};
+  const checkAns = () => {
+    if (selected === "Poison")
+      setAnswer(
+        "Correct! The tea was poured, sipped, then Mr.Holmes fell to the ground. There is no blood to indicate external injuries."
+      );
+    else setAnswer("Incorrect. Try again.");
+  };
 
   return (
     <>
       <h2>Look for Clues at the Crime Scene!</h2>
-      <img src={murderImg} width="75%" />
+      <img src={murderImg} width="80%" />
       <p>
         *Image originally from Season of Mystery: The Cherry Blossom Murders
         with slight modification
       </p>
-      <h2>You can pick up to four people to ask follow-up questions:</h2>
+      <h2>What do you believe the murder weapon is?</h2>
       <Select
         defaultValue="Broom"
         style={{ width: 120 }}
@@ -35,7 +41,7 @@ const LevelTwo = (props) => {
         <Option value="Books">Books</Option>
       </Select>
       <Button primary onClick={checkAns}>
-        Question
+        Select
       </Button>
       <br />
       {answer && <h3>{answer}</h3>}
