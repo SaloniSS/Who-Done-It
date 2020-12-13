@@ -1,4 +1,4 @@
-import { Collapse } from "antd";
+import { Collapse, Avatar } from "antd";
 const { Panel } = Collapse;
 
 const text = `
@@ -15,7 +15,21 @@ export const Profiles = () => {
         <Panel header="Sherlock Holmes" key="1">
           <p>{text}</p>
         </Panel>
-        <Panel header="Watson" key="2">
+        <Panel
+          header={
+            <div
+              style={{
+                display: "flex",
+                direction: "flex-row",
+                justifyContent: "space-between",
+              }}
+            >
+              <p>Watson</p>
+              <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+            </div>
+          }
+          key="2"
+        >
           <p>{text}</p>
         </Panel>
         <Panel header="Nancy Drew" key="3">
