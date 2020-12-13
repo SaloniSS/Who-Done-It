@@ -96,10 +96,11 @@ export const LevelOne = (props) => {
 
   return (
     <div>
-
-    <h2>Upload an image of you dressed as a detective!</h2>
-       <p>Before we began, let's get into our detective gear!!</p>
-     
+      <h2>Upload an image of you dressed as a detective</h2>
+      <p>
+        Before we began, let's get into our detective gear! Your character will
+        be selected based on who you more closely resemble.
+      </p>
 
       <main>
         <form onSubmit={(e) => handleFileUpload(e)}>
