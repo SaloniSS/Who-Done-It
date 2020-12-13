@@ -41,7 +41,7 @@ export const LevelOne = (props) => {
     e.preventDefault();
     setIsLoading(true);
     setIsDisabled(true);
-    setButtonText("Wait we're uploading your file...");
+    setButtonText("Please wait, we're uploading your file...");
 
     try {
       if (selectedFile !== "") {
@@ -166,13 +166,13 @@ export const LevelOne = (props) => {
 
       {detective && (
         <div>
-          <p>You most look like {detective} because you are wearing:</p>
+          <p>You look most like {detective} because you are wearing:</p>
           <ul>
             {exists.map((value, index) => {
               return <li key={index}>{value}</li>;
             })}
           </ul>
-          <p>You can look like {detective} more by wearing:</p>
+          <p>You can look more like {detective} by wearing:</p>
           <ul>
             {wear.map((value, index) => {
               return <li key={index}>{value}</li>;

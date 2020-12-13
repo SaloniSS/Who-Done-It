@@ -16,7 +16,7 @@ const LevelFour = (props) => {
       setAnswer(
         "You accused " +
           selected +
-          ". He is the murderer! There were inconsistencies in his alibi. Before he could escape, the rest of the detectives cornered him, and you called police! You solved the mystery! As for Holmes, he was taken to the hospital and is making a miraculous recovery. We should've known that Sherlock Holmes could survive anything at this point! Happy ending!"
+          ". You solved the mystery! He is the culprit! There were inconsistencies in his alibi, and he poisoned Holmes' tea! Before Gadget could escape, the rest of the detectives cornered him, while you called the police! As for Holmes, he was taken to the hospital and is making a miraculous recovery. We should've known that Sherlock Holmes could survive anything at this point, with all those tricks up his sleeve! Congratulations!"
       );
     } else
       setAnswer(

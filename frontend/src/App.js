@@ -53,7 +53,7 @@ function App() {
           <Profiles />
         </Sider>
         <Layout>
-          <Header>Who Done It?</Header>
+          <Header>Murder Mystery</Header>
           <Content style={{ padding: 20 }}>{getLevel()}</Content>
         </Layout>
       </Layout>

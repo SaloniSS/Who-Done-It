@@ -32,7 +32,7 @@ const detectives = [
   {
     name: "Velma Dinkley",
     image:
-      "https://lh3.googleusercontent.com/proxy/ZMFATWnhiNxinWZUVxzrzjFAVtnWzsjWZUhp76axl58kHE3K2saTcAdzOMzUpDfp1IacB1yM-JIWz5todN91",
+      "https://lh3.googleusercontent.com/proxy/W3UTBMbBj5ctvlZRNchJaTMRVH5-VDNtCTpuGHRRCEtxP6AOyfwaGHZepBPaacB8HecnDMpKRqWc4VAfCTmn",
     description:
       "She is a studious young lady who is fascinated with mysteries. She solves cases with her friends called the Scooby Doo Gang. She’s a big fan of Holmes, and got the opportunity to meet him at a convention. ",
   },

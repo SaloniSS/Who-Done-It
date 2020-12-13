@@ -6,7 +6,7 @@ const data = [
   {
     author: "John Watson",
     avatar:
-      "https://static.wikia.nocookie.net/bakerstreet/images/4/42/John-watson-season-4.jpg/revision/latest/top-crop/width/360/height/450?cb=20161212231000",
+      "https://www.indiewire.com/wp-content/uploads/2017/01/sherlock_s4_ep1_015-e1483325579393.jpg",
     content: (
       <p>
         I arrived earlier than most because I was surprised Mr.Holmes invited
@@ -63,7 +63,7 @@ const data = [
   {
     author: "Velma Dinkley",
     avatar:
-      "https://lh3.googleusercontent.com/proxy/ZMFATWnhiNxinWZUVxzrzjFAVtnWzsjWZUhp76axl58kHE3K2saTcAdzOMzUpDfp1IacB1yM-JIWz5todN91",
+      "https://lh3.googleusercontent.com/proxy/W3UTBMbBj5ctvlZRNchJaTMRVH5-VDNtCTpuGHRRCEtxP6AOyfwaGHZepBPaacB8HecnDMpKRqWc4VAfCTmn",
     content: (
       <p>
         I was trying to decipher the paper map and might have gotten lost. I
@@ -138,7 +138,7 @@ const LevelThree = (props) => {
         );
         return;
       case "Velma":
-        setAnswer("I didn't loose my glasses this time!");
+        setAnswer("I didn't lose my glasses this time!");
         return;
       case "Gadget":
         setAnswer(
@@ -176,7 +176,7 @@ const LevelThree = (props) => {
           </li>
         )}
       />
-      <h2>You can pick up to four people to ask follow-up questions:</h2>
+      <h2>Who would you like to interrogate further?:</h2>
       <Select
         defaultValue="Butler"
         style={{ width: 120 }}
