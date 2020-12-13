@@ -183,18 +183,6 @@ export const LevelOne = (props) => {
           </Button>
         </div>
       )}
-
-      <Button
-        type="primary"
-        onClick={props.prevLevel}
-        style={{ margin: 15, marginLeft: 0 }}
-      >
-        Start Over
-      </Button>
-
-      <Button type="primary" onClick={props.nextLevel}>
-        Skip
-      </Button>
     </div>
   );
 };

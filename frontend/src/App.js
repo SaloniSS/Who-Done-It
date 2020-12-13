@@ -34,13 +34,13 @@ function App() {
       case 0:
         return <Start nextLevel={nextLevel} />;
       case 1:
-        return <LevelOne nextLevel={nextLevel} prevLevel={prevLevel} />;
+        return <LevelOne nextLevel={nextLevel} />;
       case 2:
-        return <LevelTwo nextLevel={nextLevel} prevLevel={prevLevel} />;
+        return <LevelTwo nextLevel={nextLevel} />;
       case 3:
-        return <LevelThree nextLevel={nextLevel} prevLevel={prevLevel} />;
+        return <LevelThree nextLevel={nextLevel} />;
       case 4:
-        return <LevelFour nextLevel={nextLevel} prevLevel={prevLevel} />;
+        return <LevelFour nextLevel={nextLevel} />;
       default:
         return <h2>error</h2>;
     }
