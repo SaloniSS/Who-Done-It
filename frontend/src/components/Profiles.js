@@ -12,7 +12,7 @@ const detectives = [
   {
     name: "John Watson",
     image:
-      "https://static.wikia.nocookie.net/bakerstreet/images/4/42/John-watson-season-4.jpg/revision/latest/top-crop/width/360/height/450?cb=20161212231000",
+      "https://www.indiewire.com/wp-content/uploads/2017/01/sherlock_s4_ep1_015-e1483325579393.jpg",
     description:
       "He is a brilliant physician, who is the closest and devoted friend of Holmes. He is a humble and dependable sidekick, and documents all of Holmes’ cases.",
   },
