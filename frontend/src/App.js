@@ -50,7 +50,7 @@ function App() {
           <Profiles />
         </Sider>
         <Layout>
-          <Header>Whodunnit?</Header>
+          <Header>Who Done It?</Header>
           <Content style={{ padding: 20 }}>{getLevel()}</Content>
         </Layout>
       </Layout>

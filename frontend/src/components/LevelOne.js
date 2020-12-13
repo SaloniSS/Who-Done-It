@@ -63,10 +63,9 @@ export const LevelOne = (props) => {
 
         console.log(result.data.fileName);
 
-        const response = await axios({
-          method: "get",
-          url: `http://localhost:5000/most-similar/${result.data.fileName}`,
-        });
+        const response = await axios(
+          `https://who-done-it-298503.uc.r.appspot.com/most-similar/${result.data.fileName}`
+        );
 
         console.log(response.data);
         setDetective(response.data);
