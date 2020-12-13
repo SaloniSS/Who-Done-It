@@ -178,12 +178,10 @@ const LevelThree = (props) => {
         <Option value="Gadget">Gadget</Option>
         <Option value="Butler">Butler</Option>
       </Select>
-      <Button primary onClick={questionSomeone}>
-        Question
-      </Button>
+      <Button onClick={questionSomeone}>Question</Button>
       <br />
       {answer && <h3>{answer}</h3>}
-      <Button primary onClick={props.nextLevel}>
+      <Button type="primary" onClick={props.nextLevel}>
         Final Guess
       </Button>
     </>

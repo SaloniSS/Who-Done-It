@@ -38,7 +38,7 @@ const LevelTwo = (props) => {
       </Button>
       <br />
       {answer && <h3>{answer}</h3>}
-      <Button primary onClick={props.nextLevel}>
+      <Button type="primary" onClick={props.nextLevel}>
         Next Level
       </Button>
     </>
