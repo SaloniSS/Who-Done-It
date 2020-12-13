@@ -52,7 +52,11 @@ const LevelTwo = (props) => {
       </Button>
       <br />
       {answer && <h3>{answer}</h3>}
-      <Button type="primary" onClick={props.nextLevel}>
+      <Button
+        type="primary"
+        onClick={props.nextLevel}
+        style={{ margin: 15, marginLeft: 0 }}
+      >
         Next Level
       </Button>
     </>
