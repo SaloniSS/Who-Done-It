@@ -1,5 +1,8 @@
 from flask import Flask
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 
@@ -33,7 +36,7 @@ def get_scores(user_image, detective_image):
             'image1': 'https://res.cloudinary.com/utd-hdt/image/upload/' + user_image,
             'image2': detective_image,
         },
-        headers={'api-key': 'dcb74c5b-e312-498f-b01c-550dc8d4c12a'}
+        headers={'api-key': os.getenv("DEEPAI_API")}
     )
     return r.json()['output']['distance']
 
