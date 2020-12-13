@@ -13,6 +13,7 @@ import { Start } from "./components/Start";
 import { LevelOne } from "./components/LevelOne";
 import LevelTwo from "./components/LevelTwo";
 import LevelThree from "./components/LevelThree";
+import LevelFour from "./components/LevelFour";
 import "./App.css";
 import "antd/dist/antd.css";
 const { Header, Sider, Content } = Layout;
@@ -38,6 +39,8 @@ function App() {
         return <LevelTwo nextLevel={nextLevel} prevLevel={prevLevel} />;
       case 3:
         return <LevelThree nextLevel={nextLevel} prevLevel={prevLevel} />;
+      case 4:
+        return <LevelFour nextLevel={nextLevel} prevLevel={prevLevel} />;
       default:
         return <h2>error</h2>;
     }
