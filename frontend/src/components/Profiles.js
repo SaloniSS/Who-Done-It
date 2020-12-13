@@ -43,7 +43,7 @@ const detectives = [
 export const Profiles = () => {
   return (
     <>
-      <h2>Profiles</h2>
+      <div>Profiles</div>
       <Collapse accordion>
         {detectives.map((dect, i) => (
           <Panel
