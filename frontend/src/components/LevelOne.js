@@ -161,7 +161,11 @@ export const LevelOne = (props) => {
         </div>
       )}
 
-      <Button type="primary" onClick={props.prevLevel}>
+      <Button
+        type="primary"
+        onClick={props.prevLevel}
+        style={{ margin: 15, marginLeft: 0 }}
+      >
         Start Over
       </Button>
 

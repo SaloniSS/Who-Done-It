@@ -50,7 +50,7 @@ function App() {
           <Profiles />
         </Sider>
         <Layout>
-          <Header>Header aka name/lvl</Header>
+          <Header>Whodunnit?</Header>
           <Content style={{ padding: 20 }}>{getLevel()}</Content>
         </Layout>
       </Layout>

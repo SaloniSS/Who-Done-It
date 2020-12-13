@@ -15,7 +15,7 @@ const LevelTwo = (props) => {
 
   return (
     <>
-      <img src={murderImg} width="75%" />
+      <img src={murderImg} width="65%" />
       <p>
         *Image originally from Season of Mystery: The Cherry Blossom Murders
         with slight modification
@@ -38,7 +38,11 @@ const LevelTwo = (props) => {
       </Button>
       <br />
       {answer && <h3>{answer}</h3>}
-      <Button type="primary" onClick={props.nextLevel}>
+      <Button
+        type="primary"
+        onClick={props.nextLevel}
+        style={{ margin: 15, marginLeft: 0 }}
+      >
         Next Level
       </Button>
     </>
