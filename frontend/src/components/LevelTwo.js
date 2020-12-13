@@ -1,5 +1,6 @@
 import { Select, Button } from "antd";
 import { useState } from "react";
+import ImageMapper from "react-image-mapper";
 import murderImg from "../murderImg.jpg";
 const { Option } = Select;
 
@@ -21,10 +22,18 @@ const LevelTwo = (props) => {
 
   return (
     <>
-    <h2>Look for Clues at the Crime Scene!</h2>
-       <p>You notice some distinct objects scattered all over the room. Your fellow detectives walk around to look for clues.</p>
-      
-      <img src={murderImg} width="80%" />
+      <h2>Look for Clues at the Crime Scene!</h2>
+      <p>
+        You notice some distinct objects scattered all over the room. Your
+        fellow detectives walk around to look for clues.
+      </p>
+      <ImageMapper
+        src={murderImg}
+        map={AREAS_MAP}
+        width={1300}
+        onClick={(area) => console.log(area.name)}
+      />
+      {/*<img src={murderImg} width="80%" />*/}
       <p>
         *Image originally from Season of Mystery: The Cherry Blossom Murders
         with slight modification
@@ -55,3 +64,34 @@ const LevelTwo = (props) => {
 };
 
 export default LevelTwo;
+
+const AREAS_MAP = {
+  name: "my-map",
+  areas: [
+    {
+      name: "1",
+      shape: "poly",
+      coords: [61, 252, 83, 233, 112, 301, 77, 315],
+      preFillColor: "green",
+      fillColor: "blue",
+    },
+    {
+      name: "2",
+      shape: "poly",
+      coords: [219, 118, 220, 210, 283, 210, 284, 119],
+      preFillColor: "pink",
+    },
+    {
+      name: "3",
+      shape: "poly",
+      coords: [381, 241, 383, 94, 462, 53, 457, 282],
+      fillColor: "yellow",
+    },
+    {
+      name: "4",
+      shape: "poly",
+      coords: [245, 285, 290, 285, 274, 239, 249, 238],
+      preFillColor: "red",
+    },
+  ],
+};
