@@ -33,7 +33,7 @@ const LevelTwo = (props) => {
   };
 
   return (
-    <>
+    <div style={{ paddingBottom: 30 }}>
       <h2>Look for Clues at the Crime Scene!</h2>
       <p>
         You notice some distinct objects scattered all over the room. Your
@@ -76,12 +76,14 @@ const LevelTwo = (props) => {
           </Button>
           <br />
           {answer && <h3>{answer}</h3>}
-          <Button type="primary" onClick={props.nextLevel}>
-            Next Level
-          </Button>
+          {answer.includes("Correct") && (
+            <Button type="primary" onClick={props.nextLevel}>
+              Next Level
+            </Button>
+          )}
         </>
       )}
-    </>
+    </div>
   );
 };
 

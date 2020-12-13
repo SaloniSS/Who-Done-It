@@ -197,7 +197,7 @@ const LevelThree = (props) => {
         onClick={props.nextLevel}
         style={{ margin: 15, marginLeft: 0 }}
       >
-        Final Guess
+        Next Level
       </Button>
     </>
   );
