@@ -21,7 +21,9 @@ const LevelTwo = (props) => {
 
   return (
     <>
-      <h2>Look for Clues at the Crime Scene!</h2>
+    <h2>Look for Clues at the Crime Scene!</h2>
+       <p>You notice some distinct objects scattered all over the room. Your fellow detectives walk around to look for clues.</p>
+      
       <img src={murderImg} width="80%" />
       <p>
         *Image originally from Season of Mystery: The Cherry Blossom Murders
