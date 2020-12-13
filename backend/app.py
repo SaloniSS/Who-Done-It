@@ -1,10 +1,12 @@
 from flask import Flask
+from flask_cors import CORS
 import requests
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 detectives = [
         {
@@ -33,7 +35,7 @@ def get_scores(user_image, detective_image):
     r = requests.post(
         "https://api.deepai.org/api/image-similarity",
         data={
-            'image1': 'https://res.cloudinary.com/utd-hdt/image/upload/' + user_image,
+            'image1': 'https://firebasestorage.googleapis.com/v0/b/who-done-it-298503.appspot.com/o/' + user_image + '?alt=media',
             'image2': detective_image,
         },
         headers={'api-key': os.getenv("DEEPAI_API")}
@@ -51,7 +53,7 @@ def get_most_similar(user_image):
     print(most_similar)
     return most_similar
 
-@app.route('/most-similar/<tag>/<name>')
-def print_most_similar(tag, name):
-    most_similar = get_most_similar(tag +'/' + name)
+@app.route('/most-similar/<image>')
+def print_most_similar(image):
+    most_similar = get_most_similar(image)
     return most_similar['name']

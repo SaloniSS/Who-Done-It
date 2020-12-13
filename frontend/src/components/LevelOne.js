@@ -28,7 +28,7 @@ export const LevelOne = () => {
   useEffect(() => {
     if (selectedFile) {
       const reader = new FileReader();
-      reader.onloadend = () => setPreview(reader.result);
+      //reader.onloadend = () => setPreview(reader.result);
       reader.readAsDataURL(selectedFile);
     }
   }, [selectedFile]);
@@ -60,7 +60,15 @@ export const LevelOne = () => {
           headers: { "Content-Type": "multipart/form-data" },
         });
 
-        console.log(result);
+        console.log(result.data.fileName);
+
+        const response = await axios({
+          method: "get",
+          url: `http://localhost:5000/most-similar/${result.data.fileName}`,
+        });
+
+        console.log(response.data);
+        setDetective(response.data);
 
         setIsLoading(false);
         setIsSuccess(true);
@@ -89,7 +97,6 @@ export const LevelOne = () => {
   return (
     <div>
       <h1>Upload an image of you dressed as a detective!</h1>
-      <button>Upload</button>
 
       <main>
         <form onSubmit={(e) => handleFileUpload(e)}>
