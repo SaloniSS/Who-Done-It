@@ -6,7 +6,6 @@
 } from "react-router-dom";*/
 import "./App.css";
 import "antd/dist/antd.css";
-import { MatchDetective } from "./pages/MatchDetective";
 import { Layout } from "antd";
 import { Profiles } from "./components/Profiles";
 import { useState } from "react";
@@ -48,23 +47,6 @@ function App() {
       </Layout>
     </div>
   );
-
-  /*return (
-    <Router>
-      <div className="App">
-        <Layout>
-          <Header>Header aka name/lvl</Header>
-          <Content style={{ padding: 20 }}>{getLevel()}</Content>
-        </Layout>
-        <Switch>
-          <Route path="/lvl-1" exact>
-            <MatchDetective />
-          </Route>
-          <Redirect to="/" />
-        </Switch>
-      </div>
-    </Router>
-  );*/
 }
 
 export default App;
