@@ -1,5 +1,5 @@
-import { Select, Button } from "antd";
-import { useState } from "react";
+import { Select, Button, Checkbox } from "antd";
+import { useState, useEffect } from "react";
 import ImageMapper from "react-image-mapper";
 import murderImg from "../murderImg.jpg";
 const { Option } = Select;
@@ -7,10 +7,22 @@ const { Option } = Select;
 const LevelTwo = (props) => {
   const [answer, setAnswer] = useState(null);
   const [selected, setSelected] = useState("Broom");
+  const [selectedVals, setSelectedVals] = useState([]);
 
   const handleChange = (value) => {
     setSelected(value);
   };
+
+  function onFindItemChange(area) {
+    if (!selectedVals.includes(area.name))
+      setSelectedVals((vals) => vals.concat(area.name));
+  }
+
+  useEffect(() => {
+    if (selectedVals.length >= foundItems.length) {
+      setAnswer("");
+    }
+  }, [selectedVals]);
 
   const checkAns = () => {
     if (selected === "Poison")
@@ -31,34 +43,44 @@ const LevelTwo = (props) => {
         src={murderImg}
         map={AREAS_MAP}
         width={1300}
-        onClick={(area) => console.log(area.name)}
+        onClick={onFindItemChange}
       />
       {/*<img src={murderImg} width="80%" />*/}
       <p>
         *Image originally from Season of Mystery: The Cherry Blossom Murders
         with slight modification
       </p>
-      <h2>What do you believe the murder weapon is?</h2>
-      <Select
-        defaultValue="Broom"
-        style={{ width: 120 }}
-        onChange={handleChange}
-      >
-        <Option value="Broom">Broom</Option>
-        <Option value="Vase">Vase</Option>
-        <Option value="Poison">Poison</Option>
-        <Option value="Painting">Painting</Option>
-        <Option value="Knife">Knife</Option>
-        <Option value="Books">Books</Option>
-      </Select>
-      <Button primary onClick={checkAns}>
-        Select
-      </Button>
-      <br />
-      {answer && <h3>{answer}</h3>}
-      <Button type="primary" onClick={props.nextLevel}>
-        Next Level
-      </Button>
+      {answer == null && (
+        <>
+          <h2>Find The Following Items On Your Search for Clues:</h2>
+          <Checkbox.Group options={foundItems} disabled value={selectedVals} />
+        </>
+      )}
+      {answer != null && (
+        <>
+          <h2>Good sleuthing! What do you believe the murder weapon is?</h2>
+          <Select
+            defaultValue="Broom"
+            style={{ width: 120 }}
+            onChange={handleChange}
+          >
+            <Option value="Broom">Broom</Option>
+            <Option value="Vase">Vase</Option>
+            <Option value="Poison">Poison</Option>
+            <Option value="Painting">Painting</Option>
+            <Option value="Knife">Knife</Option>
+            <Option value="Books">Books</Option>
+          </Select>
+          <Button primary onClick={checkAns}>
+            Select
+          </Button>
+          <br />
+          {answer && <h3>{answer}</h3>}
+          <Button type="primary" onClick={props.nextLevel}>
+            Next Level
+          </Button>
+        </>
+      )}
     </>
   );
 };
@@ -69,29 +91,25 @@ const AREAS_MAP = {
   name: "my-map",
   areas: [
     {
-      name: "1",
+      name: "Rabbit",
       shape: "poly",
       coords: [61, 252, 83, 233, 112, 301, 77, 315],
-      preFillColor: "green",
-      fillColor: "blue",
     },
     {
-      name: "2",
+      name: "Fish",
       shape: "poly",
-      coords: [219, 118, 220, 210, 283, 210, 284, 119],
-      preFillColor: "pink",
+      coords: [621, 13, 650, 10, 647, 56, 662, 56, 649, 80, 632, 69, 616, 41],
     },
     {
-      name: "3",
+      name: "Binoculars",
       shape: "poly",
-      coords: [381, 241, 383, 94, 462, 53, 457, 282],
-      fillColor: "yellow",
-    },
-    {
-      name: "4",
-      shape: "poly",
-      coords: [245, 285, 290, 285, 274, 239, 249, 238],
-      preFillColor: "red",
+      coords: [1238, 442, 1289, 455, 1275, 499, 1217, 469],
     },
   ],
 };
+
+const foundItems = [
+  { label: "Fish", value: "Fish" },
+  { label: "Rabbit", value: "Rabbit" },
+  { label: "Binoculars", value: "Binoculars" },
+];

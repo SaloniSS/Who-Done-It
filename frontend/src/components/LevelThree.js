@@ -158,7 +158,11 @@ const LevelThree = (props) => {
   return (
     <>
       <h2>The Guests' Abilis</h2>
-      <p>Ah! Poison! Who could’ve done it? You looked at your companions in confusion. How was the murder able to obtain this? You listen to the conversation.</p>
+      <p>
+        Ah! Poison! Who could’ve done it? You looked at your companions in
+        confusion. How was the murderer able to obtain this? You listen to the
+        conversation.
+      </p>
       <List
         itemLayout="horizontal"
         dataSource={data}
