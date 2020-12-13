@@ -46,9 +46,13 @@ const LevelFour = (props) => {
       </Select>
       <Button onClick={questionSomeone}>Accuse</Button>
       <br />
-      {answer && <h3>{answer}</h3>}
-      <br /> <br />
-      <img src={endcard} width="70%" />
+      {answer && (
+        <div>
+          <h3>{answer}</h3>
+          <br /> <br />
+          <img src={endcard} width="70%" />
+        </div>
+      )}
     </>
   );
 };
