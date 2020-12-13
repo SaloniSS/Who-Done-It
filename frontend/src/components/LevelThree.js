@@ -5,7 +5,8 @@ const { Option } = Select;
 const data = [
   {
     author: "John Watson",
-    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    avatar:
+      "https://static.wikia.nocookie.net/bakerstreet/images/4/42/John-watson-season-4.jpg/revision/latest/top-crop/width/360/height/450?cb=20161212231000",
     content: (
       <p>
         I arrived earlier than most because I was surprised Mr.Holmes invited
@@ -25,7 +26,8 @@ const data = [
   },
   {
     author: "Nancy Drew",
-    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    avatar:
+      "https://photo.kidzworld.com/images/2015818/04140346-3661-4a4d-8154-6cb5e483ab27/emma-nancy-drew.jpg",
     content: (
       <p>
         I got there right on time. I had to go to the bathroom, so I handed my
@@ -43,7 +45,7 @@ const data = [
   },
   {
     author: "Detective Clouseau",
-    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    avatar: "https://www.vancouversun.com/cms/binary/1249135.jpg",
     content: (
       <p>
         I arrived with Ms.Dinkley. She went off to talk to someone else so I
@@ -60,7 +62,8 @@ const data = [
   },
   {
     author: "Velma Dinkley",
-    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    avatar:
+      "https://lh3.googleusercontent.com/proxy/ZMFATWnhiNxinWZUVxzrzjFAVtnWzsjWZUhp76axl58kHE3K2saTcAdzOMzUpDfp1IacB1yM-JIWz5todN91",
     content: (
       <p>
         I was trying to decipher the paper map and might have gotten lost. I
@@ -75,7 +78,8 @@ const data = [
   },
   {
     author: "Inspector Gadget",
-    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    avatar:
+      "https://64.media.tumblr.com/9b728c50f668fff037256520c47d42f6/tumblr_inline_ojjvx0FQ3M1rczmrt_540.png",
     content: (
       <p>
         I was running late as I spilled some tea on my cloak and gloves. When I
@@ -90,7 +94,8 @@ const data = [
   },
   {
     author: "Butler",
-    avatar: "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
+    avatar:
+      "https://s.wsj.net/public/resources/images/B3-BC591_rossji_GR_20180713114845.jpg",
     content: (
       <p>
         I was preparing the main course and I noticed we were running out of
@@ -178,12 +183,10 @@ const LevelThree = (props) => {
         <Option value="Gadget">Gadget</Option>
         <Option value="Butler">Butler</Option>
       </Select>
-      <Button primary onClick={questionSomeone}>
-        Question
-      </Button>
+      <Button onClick={questionSomeone}>Question</Button>
       <br />
       {answer && <h3>{answer}</h3>}
-      <Button primary onClick={props.nextLevel}>
+      <Button type="primary" onClick={props.nextLevel}>
         Final Guess
       </Button>
     </>
