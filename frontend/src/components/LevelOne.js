@@ -5,6 +5,8 @@ import axios from "axios";
 export const LevelOne = (props) => {
   let [detective, setDetective] = useState("");
   let [image, setImage] = useState("");
+  let [exists, setExists] = useState([]);
+  let [wear, setWear] = useState([]);
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [fileName, setFileName] = useState(null);
@@ -69,6 +71,13 @@ export const LevelOne = (props) => {
 
         console.log(response.data);
         setDetective(response.data);
+
+        const objects = await axios(
+          `https://who-done-it-298503.uc.r.appspot.com/analyze/${response.data}/${result.data.fileName}`
+        );
+        console.log(objects);
+        setExists(objects.data.exists);
+        setWear(objects.data.wear);
 
         setIsLoading(false);
         setIsSuccess(true);
@@ -153,7 +162,18 @@ export const LevelOne = (props) => {
 
       {detective && (
         <div>
-          <p>You most look like {detective}</p>
+          <p>You most look like {detective} because you are wearing:</p>
+          <ul>
+            {exists.map((value, index) => {
+              return <li key={index}>{value}</li>;
+            })}
+          </ul>
+          <p>You can look like {detective} more by wearing:</p>
+          <ul>
+            {wear.map((value, index) => {
+              return <li key={index}>{value}</li>;
+            })}
+          </ul>
           <Button type="primary" onClick={props.nextLevel}>
             Next level
           </Button>
