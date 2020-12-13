@@ -11,22 +11,22 @@ CORS(app)
 detectives = [
         {
             "name": "Watson",
-            "image": "https://res.cloudinary.com/utd-hdt/image/upload/v1607821008/watson_ezjtua.jpg",
+            "image": "https://firebasestorage.googleapis.com/v0/b/who-done-it-298503.appspot.com/o/clouseau.jpeg?alt=media",
             "score": 0
         },
         {
             "name": "Nancy Drew",
-            "image": "https://res.cloudinary.com/utd-hdt/image/upload/v1607821008/drew_w2zxmp.png",
+            "image": "https://firebasestorage.googleapis.com/v0/b/who-done-it-298503.appspot.com/o/nancy.png?alt=media",
             "score": 0
         },
         {
             "name": "Detective Clouseau",
-            "image": "https://res.cloudinary.com/utd-hdt/image/upload/v1607821007/clouseau_tuwjpt.jpg",
+            "image": "https://firebasestorage.googleapis.com/v0/b/who-done-it-298503.appspot.com/o/clouseau.jpeg?alt=media",
             "score": 0
         },
         {
             "name": "Velma Dinkley",
-            "image": "https://res.cloudinary.com/utd-hdt/image/upload/v1607821008/velma_rmlqm3.webp",
+            "image": "https://firebasestorage.googleapis.com/v0/b/who-done-it-298503.appspot.com/o/velma.jpeg?alt=media",
             "score": 0
         }
     ]

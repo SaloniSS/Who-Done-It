@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Button } from "antd";
 import axios from "axios";
 
-export const LevelOne = () => {
+export const LevelOne = (props) => {
   let [detective, setDetective] = useState("");
   let [image, setImage] = useState("");
 
@@ -151,7 +152,14 @@ export const LevelOne = () => {
         </form>
       </main>
 
-      {detective && <p>You most look like {detective}</p>}
+      {detective && (
+        <div>
+          <p>You most look like {detective}</p>
+          <Button type="primary" onClick={props.nextLevel}>
+            Next level
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
