@@ -57,3 +57,6 @@ def get_most_similar(user_image):
 def print_most_similar(image):
     most_similar = get_most_similar(image)
     return most_similar['name']
+
+if __name__ == '__main__':
+   app.run()
