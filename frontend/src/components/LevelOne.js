@@ -105,7 +105,10 @@ export const LevelOne = (props) => {
 
   return (
     <div>
-      <h1>Upload an image of you dressed as a detective!</h1>
+
+    <h2>Upload an image of you dressed as a detective!</h2>
+       <p>Before we began, let's get into our detective gear!!</p>
+     
 
       <main>
         <form onSubmit={(e) => handleFileUpload(e)}>
@@ -180,7 +183,11 @@ export const LevelOne = (props) => {
         </div>
       )}
 
-      <Button type="primary" onClick={props.prevLevel}>
+      <Button
+        type="primary"
+        onClick={props.prevLevel}
+        style={{ margin: 15, marginLeft: 0 }}
+      >
         Start Over
       </Button>
 

@@ -158,6 +158,11 @@ const LevelThree = (props) => {
   return (
     <>
       <h2>The Guests' Abilis</h2>
+      <p>
+        Ah! Poison! Who could’ve done it? You looked at your companions in
+        confusion. How was the murderer able to obtain this? You listen to the
+        conversation.
+      </p>
       <List
         itemLayout="horizontal"
         dataSource={data}
@@ -187,7 +192,11 @@ const LevelThree = (props) => {
       <Button onClick={questionSomeone}>Question</Button>
       <br />
       {answer && <h3>{answer}</h3>}
-      <Button type="primary" onClick={props.nextLevel}>
+      <Button
+        type="primary"
+        onClick={props.nextLevel}
+        style={{ margin: 15, marginLeft: 0 }}
+      >
         Final Guess
       </Button>
     </>
