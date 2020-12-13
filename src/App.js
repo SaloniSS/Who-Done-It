@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Sider>
+        <Sider style={{ padding: 10 }}>
           <Profiles />
         </Sider>
         <Layout>

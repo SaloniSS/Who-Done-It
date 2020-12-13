@@ -9,16 +9,19 @@ const text = `
 
 export const Profiles = () => {
   return (
-    <Collapse accordion>
-      <Panel header="Sherlock Holmes" key="1">
-        <p>{text}</p>
-      </Panel>
-      <Panel header="Watson" key="2">
-        <p>{text}</p>
-      </Panel>
-      <Panel header="Nancy Drew" key="3">
-        <p>{text}</p>
-      </Panel>
-    </Collapse>
+    <>
+      <h2>Profiles</h2>
+      <Collapse accordion>
+        <Panel header="Sherlock Holmes" key="1">
+          <p>{text}</p>
+        </Panel>
+        <Panel header="Watson" key="2">
+          <p>{text}</p>
+        </Panel>
+        <Panel header="Nancy Drew" key="3">
+          <p>{text}</p>
+        </Panel>
+      </Collapse>
+    </>
   );
 };

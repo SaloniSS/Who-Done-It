@@ -4,4 +4,6 @@
 
 .ant-layout-sider {
   background: blueviolet !important;
+  width: 300px !important;
+  max-width: 500px !important;
 }
