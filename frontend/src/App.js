@@ -10,12 +10,16 @@ const { Header, Footer, Sider, Content } = Layout;
 function App() {
   const [level, setLevel] = useState(0);
 
+  const nextLevel = () => {
+    setLevel((lvl) => lvl + 1);
+  };
+
   const getLevel = () => {
     switch (level) {
       case 0:
-        return <Start />;
+        return <Start nextLevel={nextLevel} />;
       case 1:
-        return <LevelOne />;
+        return <LevelOne nextLevel={nextLevel} />;
       default:
         return <h2>error</h2>;
     }
@@ -30,7 +34,6 @@ function App() {
         <Layout>
           <Header>Header aka name/lvl</Header>
           <Content style={{ padding: 20 }}>{getLevel()}</Content>
-          <Footer>enter answer here?</Footer>
         </Layout>
       </Layout>
     </div>
