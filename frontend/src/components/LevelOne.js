@@ -6,7 +6,7 @@ export const LevelOne = () => {
 
   return (
     <div>
-      <h1>Upload an Image Dressed as a Detective</h1>
+      <h1>Upload an image of you dressed as a detective!</h1>
       <button>Upload</button>
       {detective && <p>You most look like {detective}</p>}
     </div>

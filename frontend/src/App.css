@@ -1,10 +1,38 @@
+body {
+  background: #d8b2b2 !important;
+}
+
 .ant-layout-header {
-  background: aqua !important;
+  background: #993232 !important;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.ant-layout-content {
+  background: #d8b2b2;
+  height: 800px;
 }
 
 .ant-layout-sider {
-  background: blueviolet !important;
+  background: #a34646 !important;
+  font-size: 28px;
   width: 350px !important;
   max-width: 500px !important;
   flex: 0 0 350px !important;
+  font-weight: bold !important;
+  padding: 20px !important;
+}
+
+.ant-collapse-item {
+  background: #b56a6a !important;
+  font-weight: bold;
+}
+
+.ant-collapse-content {
+  background: #d8b2b2 !important;
+  font-weight: normal;
+}
+
+.ant-layout-footer {
+  background: #ead6d6 !important;
 }
